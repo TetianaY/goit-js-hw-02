@@ -16,22 +16,27 @@ do {
 
     } else {
 
-        if (input === '') {
-            message = "Вы ничего не ввели, попробуйте еще раз."
-            alert(message);
-            continue;
-        }
+        // if (input === '') {
+        //     message = "Вы ничего не ввели, попробуйте еще раз."
+        //     console.log(numbers.length);
+        //     console.log(numbers);
+        //     alert(message);
+        //     continue;
+        // }
 
         input = Number(input);
         const notANumber = Number.isNaN(input);
 
         if (notANumber) {
-            message = "Было введено не число, попробуйте еще раз."
+            message = "Было введено не число, попробуйте еще раз."           
             alert(message);
             continue;
         }
 
         numbers.push(input);
+
+        console.log(numbers.length);
+        console.log(numbers);
 
                
     }     
