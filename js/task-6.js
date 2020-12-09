@@ -34,11 +34,6 @@ do {
         }
 
         numbers.push(input);
-
-        console.log(numbers.length);
-        console.log(numbers);
-
-               
     }     
 }
 while (input !== null);
