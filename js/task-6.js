@@ -1,52 +1,47 @@
-// let total = 0;
-// let userInput;
 
-// while (userInput !== null) {
-//   userInput = prompt("Введите число");
-
-//     if (userInput === null) {
-//         console.log("Отмена пользователем");
-//         break;
-//     }
-
-//     userInput = Number(userInput);
-
-//     const notANumber = Number.isNaN(userInput);
-
-//     if (notANumber) {
-//         console.log("Было введено не число, попробуйте еще раз");
-//         continue;
-//     }
-
-//     total += userInput;
-// }
-
-// console.log(`Общая сумма чисел равна ${total}`)
-
+let input;
+const numbers = [];
 let total = 0;
-let userInput;
+let message;
 
 do {
-    userInput = prompt("Введите число");
+    input = prompt("Введите число");
 
-    if (userInput === null) {
-        console.log("Отмена пользователем");        
+    if (input === null) {
+        message = "Отмена пользователем"
+        console.log(message);
     } else {
 
-        userInput = Number(userInput);
-        const notANumber = Number.isNaN(userInput);
+        input = Number(input);
+        const notANumber = Number.isNaN(input);
 
         if (notANumber) {
-            alert("Было введено не число, попробуйте еще раз");
+            message = "Было введено не число, попробуйте еще раз"
+            alert(message);
             continue;
         }
-       
-    }
 
-    total += userInput;
+        numbers.push(input);
+    }
 }
 
-while (userInput !== null);   
-    
-alert(`Общая сумма чисел равна ${total}`);
+while (input !== null);
+console.log(numbers);
 
+
+const countNumbers = function (numbers) {
+    
+
+    for (let number of numbers) {
+        total += number;
+    }
+    message = `Общая сумма чисел равна ${total}`;
+    return message;
+    
+}
+
+console.log(countNumbers(numbers));
+
+
+       
+    
