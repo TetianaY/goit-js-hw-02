@@ -1,7 +1,7 @@
 
 const logItems = function (array) {
     for (const item of array) {
-        console.log(`${array.indexOf(item)}-${item}`);        
+        console.log(`${array.indexOf(item)+1}-${item}`);        
     }          
 }
 

@@ -4,11 +4,11 @@ const formatString = function (string) {
   let result = string;
 
   if (string.length > 40) {
-    let stringArr = string.split(''); 
+    const stringArr = string.split(''); 
     console.log(stringArr);
-    let restSymbol = stringArr.length - 40;
+    const restSymbol = stringArr.length - 40;
     console.log(restSymbol);
-    const r1 = stringArr.splice(40, restSymbol, "...");
+    stringArr.splice(40, restSymbol, "...");
     console.log(stringArr);
     result = stringArr.join('');        
     console.log(result.length);      
